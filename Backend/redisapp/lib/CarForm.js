@@ -1,4 +1,7 @@
-export default function CarForm() {
+import React from 'react';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
+export default function CarForm()  {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -21,13 +24,39 @@ export default function CarForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input name="make" type="text" />
-            <input name="model" type="text" />
-            <input name="image" type="text" />
-            <textarea name="description" type="text" />
+        <div>
+        <Form onSubmit={handleSubmit}>
 
-            <button type="submit">Crear Automovil</button>
-        </form>
+            <FormGroup>
+                <Label>Marca</Label> <br></br>
+                <Input name="make" type="text" />
+            </FormGroup>
+
+            <br></br>
+
+            <FormGroup>
+                <Label>Modelo</Label> <br></br>
+                <Input name="model" type="text" />
+            </FormGroup>
+
+            <br></br>
+
+            <FormGroup>
+                <Label>Imagen</Label> <br></br>
+                <Input name="image" type="text" />
+            </FormGroup>
+
+            <br></br>
+
+            <FormGroup>
+                <Label>Descripción</Label> <br></br>
+                <Input name="description" type="text" />
+            </FormGroup>
+
+            <br></br>
+
+            <Button color='primary' type="submit">Crear Automovil</Button>
+        </Form>
+        </div>
     )
 }
