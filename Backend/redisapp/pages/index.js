@@ -5,6 +5,7 @@ export default function Home() {
     <div>
       <h1>Ingrese un Vehículo</h1>
       <CarForm />
+      
     </div>
   )
     
