@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "net": "^1.0.2",
     "next": "^12.1.6-canary.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "reactstrap": "^9.0.2",
-    "redis-om": "^0.2.1"
+    "redis-om": "^0.2.1",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "eslint": "8.13.0",
