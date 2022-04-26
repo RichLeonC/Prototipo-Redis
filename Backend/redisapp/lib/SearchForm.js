@@ -10,7 +10,7 @@ export default function CarForm() {
 
     if (q.length > 2) {
       const params = new URLSearchParams({ q })
-
+      console.log("q: "+q);
       const res = await fetch('/api/search?' + params);
       
       const result = await res.json();

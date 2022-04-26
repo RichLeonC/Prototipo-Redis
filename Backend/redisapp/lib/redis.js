@@ -47,8 +47,8 @@ export async function searchCars(q) {
 
   const cars = await repository.search()
     .where('make').eq(q)
-    .or('model').eq(q)
-    .or('description').matches(q)
+    // .or('model').eq("Toyota")
+    // .or('description').matches("Toyota")
     .return.all();
     
   return cars;
