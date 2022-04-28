@@ -20,17 +20,20 @@ export default function CarForm() {
   }
 
   return (
-  <div className="container">
-
+  <div style={{"position":"relative","top":"3rem"}} className="container col-3">
+ 
     <h1>Busca tu carro favorito</h1>
     <input className="form-control" onChange={search} type="text" />
+    <br/>
     <ul>
       {hits.map((hit) => (
         <li key={hit.entityId}>
-          {hit.make} {hit.model}
+          <img src={hit.image} width="100"/>
+          <h5>{hit.make} {hit.model} </h5>
         </li>
       ))}
     </ul>
+
   </div>
   );
 }
