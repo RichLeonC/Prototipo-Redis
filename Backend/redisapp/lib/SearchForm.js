@@ -20,24 +20,28 @@ export default function CarForm() {
   }
 
   return (
-  <div style={{"position":"relative","top":"3rem"}} className="container col-3">
- 
-    <h1>Busca tu carro favorito</h1>
-    <input className="form-control" onChange={search} type="text" />
-    <br/>
-    <ul>
-      {hits.map((hit) => (
-        <div className="container">
-        <li style={{"border":"solid"}} key={hit.entityId}>
-          <img src={hit.image} width="100"/>
-          <h5 style={{"textAlign":"right"}}>{hit.make} {hit.model}</h5>
-          <label style={{"textAlign":"right"}}>{hit.description}</label>
-        </li>
-        <br></br>
-        </div>
-      ))}
-    </ul>
+    <div style={{ "position": "relative", "top": "3rem" }} className="container col-3">
 
-  </div>
+      <h1>Busca tu carro favorito</h1>
+      <input className="form-control" onChange={search} type="text" />
+      <br />
+      <ul>
+        {hits.map((hit) => (
+          <div className="container">
+            <li  key={hit.entityId}>
+              <div className="card" style={{"width": "18rem"}}>
+                <img src={hit.image} className="card-img-top" />
+                  <div className="card-body">
+                    <h5 className="card-title">{hit.make} {hit.model}</h5>
+                    <p className="card-text">{hit.description}</p>
+                 </div>
+              </div>
+            </li>
+            <br></br>
+          </div>
+        ))}
+      </ul>
+
+    </div>
   );
 }
