@@ -1,3 +1,7 @@
+
+
+
+
 export default function CarForm()  { // Función que genera un automovil en la base de datos
 
     const handleSubmit = async (event) => { //Constante que envía el objeto al archivo cars.js
@@ -19,20 +23,25 @@ export default function CarForm()  { // Función que genera un automovil en la b
       };
 
       return (
-        <form onSubmit={handleSubmit}>
-        <h3>Marca</h3>
-          <input name="make" type="text"  /* Introduce la marca del vehículo*//> 
+       
+        <form onSubmit={handleSubmit} className = "container col-3" >
+        <h1  >Ingrese un vehículo</h1>
+        <h4 >Marca</h4>
+        <input className = "form-control " name="make" type="text"  placeholder="Ingrese Marca"/* Introduce la marca del vehículo*//>  
           <br></br>
-        <h3>Modelo</h3>
-          <input name="model" type="text" /* Introduce el modelo del vehículo*/ />
+        <h4>Modelo</h4>
+          <input className = "form-control " name="model" type="text" placeholder="Ingrese Modelo" /* Introduce el modelo del vehículo*/ />
           <br></br>
-        <h3>Imagen</h3>
-          <input name="image" type="text"  /* Introduce una imagen del vehículo*/ />
+        <h4>Imagen</h4>
+          <input className = "form-control " name="image" type="text" placeholder="Ingrese URL en jpg " /* Introduce una imagen del vehículo*/ />
           <br></br>
-        <h3>Descripción</h3>
-          <textarea name="description" type="text"  /* Introduce una descripción del vehículo*/ />
+        <h4>Descripción</h4>
+          <textarea className = "form-control " name="description" type="text" placeholder="Ingrese Información extra" /* Introduce una descripción del vehículo*/ />
           <br></br>
-          <button type="submit">Ingresar Automovil </button> 
+          <button type="submit"  class="btn btn-info" >Ingresar Automovil </button> 
+         
         </form>
+        
+     
       );
 }

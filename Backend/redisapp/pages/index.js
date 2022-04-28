@@ -4,9 +4,9 @@ import SearchForm from "../lib/SearchForm"
 export default function Home() {
   return (
     <div>
-     {/* <h1>Ingrese un Vehículo</h1>
-      <CarForm />  */}
-      <SearchForm/>
+    
+      <CarForm /> 
+      {/* <SearchForm/> */}
     </div>
   )
     
