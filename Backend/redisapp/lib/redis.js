@@ -12,10 +12,11 @@ class Car extends Entity {}
 let schema = new Schema(
   Car,
   {
-    make: { type: 'string' },
-    model: { type: 'string' },
+    make: { type: 'text' },
+    model: { type: 'text' },
     image: { type: 'string' },
     description: { type: 'string', textSearch: true },
+    link : {type : 'string'}
   },
   {
     dataStructure: 'JSON',
@@ -47,8 +48,8 @@ export async function searchCars(q) {
 
   const cars = await repository.search()
     .where('make').eq(q)
-    // .or('model').eq("Toyota")
-    // .or('description').matches("Toyota")
+    // .or('model').eq(q)
+    // .or('description').matches(q)
     .return.all();
     
   return cars;

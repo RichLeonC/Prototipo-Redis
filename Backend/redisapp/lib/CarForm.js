@@ -40,6 +40,9 @@ export default function CarForm()  { // Función que genera un automovil en la b
         <h4>Descripción</h4>
           <textarea className = "form-control " name="description" type="text" placeholder="Ingrese Información extra" /* Introduce una descripción del vehículo*/ />
           <br></br>
+          <h4>Link de Compra</h4>
+          <input className = "form-control " name="link" type="text" placeholder="Ingrese Link" /* Introduce el modelo del vehículo*/ />
+          <br></br>
           <button type="submit"  class="btn btn-info" >Ingresar Automovil </button> 
           
          
