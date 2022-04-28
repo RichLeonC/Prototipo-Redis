@@ -6,7 +6,7 @@ export default function Home() {
     <div>
     
       <CarForm /> 
-      {/* <SearchForm/> */}
+       <SearchForm/> 
     </div>
   )
     

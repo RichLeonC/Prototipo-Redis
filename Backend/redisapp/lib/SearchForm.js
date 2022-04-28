@@ -27,10 +27,14 @@ export default function CarForm() {
     <br/>
     <ul>
       {hits.map((hit) => (
-        <li key={hit.entityId}>
+        <div className="container">
+        <li style={{"border":"solid"}} key={hit.entityId}>
           <img src={hit.image} width="100"/>
-          <h5>{hit.make} {hit.model} </h5>
+          <h5 style={{"textAlign":"right"}}>{hit.make} {hit.model}</h5>
+          <label style={{"textAlign":"right"}}>{hit.description}</label>
         </li>
+        <br></br>
+        </div>
       ))}
     </ul>
 
