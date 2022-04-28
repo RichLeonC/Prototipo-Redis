@@ -12,8 +12,8 @@ class Car extends Entity {}
 let schema = new Schema(// esquema del vehiculo que va a entrar en la base de datos 
   Car,
   {
-    make: { type: 'text' },
-    model: { type: 'text' },
+    make: { type: 'string' },
+    model: { type: 'string' },
     image: { type: 'string' },
     description: { type: 'string', textSearch: true },
     link : {type : 'string'}
