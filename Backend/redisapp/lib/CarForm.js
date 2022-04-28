@@ -21,12 +21,13 @@ export default function CarForm()  { // Función que genera un automovil en la b
         const result = await res.json(); //Se guarda el resultado del envío
         console.log(result) ;//Se imprime en consola
         alert("Carro agregado correctamente")
+        formulario.reset();
 
       };
 
       return (
        
-        <form onSubmit={handleSubmit} className = "container col-3" >
+        <form onSubmit={handleSubmit} className = "container col-3" id = "formulario">
         <h1 color= "">Ingrese un vehículo</h1>
         <h4 >Marca</h4>
         <input className = "form-control " name="make" type="text"  placeholder="Ingrese Marca"/* Introduce la marca del vehículo*//>  
