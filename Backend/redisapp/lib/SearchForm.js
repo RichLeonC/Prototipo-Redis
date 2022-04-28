@@ -37,7 +37,6 @@ export default function CarForm() {
         </div>
       ))}
     </ul>
-
-  </div>
+    </div>
   );
 }

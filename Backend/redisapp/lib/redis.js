@@ -1,15 +1,15 @@
 import { Client, Entity, Schema, Repository } from 'redis-om';
 
-const client = new Client();
+const client = new Client();// Agregar un nuevo cliente a la base de datos
 
-async function connect() {
-    if (!client.isOpen()) {
+async function connect() {// abre la conexión con Redis; el link de conexión  se encuentra en el file llamado 
+    if (!client.isOpen()) {// .env.local que contiene el identificador unico de la base en la nube , el puerto y el usuario 
         await client.open(process.env.REDIS_URL);
     }
 }
 
 class Car extends Entity {}
-let schema = new Schema(
+let schema = new Schema(// esquema del vehiculo que va a entrar en la base de datos 
   Car,
   {
     make: { type: 'text' },
@@ -19,18 +19,18 @@ let schema = new Schema(
     link : {type : 'string'}
   },
   {
-    dataStructure: 'JSON',
+    dataStructure: 'JSON',// la estructura que se guarda es un json para comprimir más los datos 
   }
 );
 
 export async function createCar(data) {
-    await connect();
+    await connect();//llamada a la función que hace la conexión 
   
-    const repository = client.fetchRepository(schema)
+    const repository = client.fetchRepository(schema) //  creación de un repositorio con el cliente y el esquema anteriormente definido
   
-    const car = repository.createEntity(data);
+    const car = repository.createEntity(data); // objeto carro 
   
-    const id = await repository.save(car);
+    const id = await repository.save(car); // creación del id unico del obejeto
     return id;
 }
 
