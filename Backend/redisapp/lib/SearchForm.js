@@ -20,7 +20,7 @@ export default function CarForm() {
   }
 
   return (    // cuando se edita se activa la funcion que busca
-    <div style={{ "position": "relative", "top": "3rem" }} className="container col-3">
+    <div style={{ "position":"absolute", "right":"350px", "top":"50px"}} className="container col-3">
 
       <h1>Busca tu carro favorito</h1>
       <input className="form-control" onChange={search} type="text" />
@@ -36,7 +36,6 @@ export default function CarForm() {
                     <p className="card-text">{hit.description}</p>
                     <a href={hit.link}className="card-text">Comprar</a>
                     
- 
                   </div>
               </div>
             </li>

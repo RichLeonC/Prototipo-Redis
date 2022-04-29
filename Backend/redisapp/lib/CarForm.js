@@ -27,7 +27,7 @@ export default function CarForm()  { // Función que genera un automovil en la b
 
       return (
        
-        <form onSubmit={handleSubmit} className = "container col-3" id = "formulario">
+        <form style={{"position":"absolute", "left":"350px", "top":"50px"}} onSubmit={handleSubmit} className = "container col-3" id = "formulario">
         <h1 color= "">Ingrese un vehículo</h1>
         <h4 >Marca</h4>
         <input className = "form-control " name="make" type="text"  placeholder="Ingrese Marca"/* Introduce la marca del vehículo*//>  
