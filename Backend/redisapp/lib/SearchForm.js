@@ -32,7 +32,7 @@ export default function CarForm() {
               <div className="card" style={{"width": "18rem"}}>
                 <img src={hit.image} className="card-img-top" />
                   <div className="card-body">
-                    <h5 className="card-title">{hit.make}{hit.model}</h5>
+                    <h5 className="card-title">{hit.make} {hit.model}</h5>
                     <p className="card-text">{hit.description}</p>
                     <a href={hit.link}className="card-text">Comprar</a>
                     
